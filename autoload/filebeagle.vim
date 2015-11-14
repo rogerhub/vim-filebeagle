@@ -671,7 +671,7 @@ function! s:NewDirectoryViewer()
             execute('normal! GV"_X')
         catch //
         endtry
-        setlocal nomodifiable
+        setlocal nomodifiable nomodified
         call cursor(1, 1)
         if has("title")
             let &titlestring = expand(self.focus_dir)
